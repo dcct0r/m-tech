@@ -19,8 +19,33 @@
 ### Инструкция по развертыванию проекта
 1. Склонировать репозиторий
 2. Перейте в папку с проектом и выполнить следующее:
-- ```mvn clean install -Dmaven.test.skip```
-- ```docker-compose build```
-- ```docker-compose up```
-3. Импортировать коллекцию Postman (Опционально)
-4. Сервис доступен по адресу localhost:8080/catalog 
+ ```
+mvn clean install -Dmaven.test.skip
+```
+ ```
+docker-compose build
+```
+```
+docker-compose up
+```
+4. Импортировать коллекцию Postman (Опционально)
+5. Сервис доступен по адресу http://localhost:8080
+
+### Эндпоинты
+На данный момент реализовано 12 эндпоинтов для добавления, получения и удаления.
+
+##### Запросы для Car
+GET запрос
+```
+/catalog/cars/{id}
+```
+```
+/catalog/cars
+```
+POST запрос
+```
+/catalog/cars
+```
+##### Запросы для CarBody
+
+##### Запросы для CarWheel
