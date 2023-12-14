@@ -40,12 +40,45 @@ GET запрос
 /catalog/cars/{id}
 ```
 ```
-/catalog/cars
+/catalog/cars/all
 ```
 POST запрос
 ```
 /catalog/cars
 ```
+DELETE запрос
+```
+/catalog/cars/{id}
+```
 ##### Запросы для CarBody
-
+GET запрос
+```
+/catalog/bodies/{id}
+```
+```
+/catalog/bodies/all
+```
+POST запрос
+```
+/catalog/bodies
+```
+DELETE запрос
+```
+/catalog/bodies/{id}
+```
 ##### Запросы для CarWheel
+GET запрос
+```
+/catalog/tyres/{id}
+```
+```
+/catalog/tyres/all
+```
+POST запрос
+```
+/catalog/tyres
+```
+DELETE запрос
+```
+/catalog/tyres/{id}
+```
