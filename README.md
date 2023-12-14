@@ -23,3 +23,4 @@
 - ```docker-compose build```
 - ```docker-compose up```
 3. Импортировать коллекцию Postman (Опционально)
+4. Сервис доступен по адресу localhost:8080/catalog 
