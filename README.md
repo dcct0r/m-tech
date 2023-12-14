@@ -30,7 +30,7 @@ docker-compose build
 ```
 docker-compose up
 ```
-4. Импортировать коллекцию Postman (Опционально)
+4. Импортировать postman-коллекцию в Postman (Опционально)
 5. Сервис доступен по адресу http://localhost:8080
 
 ## ⚙️ Эндпоинты
