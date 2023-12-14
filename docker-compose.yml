@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  autoservice_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/m_tech
+      - SPRING_DATASOURCE_USERNAME=roman
+      - SPRING_DATASOURCE_PASSWORD=5555
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: postgres:16.0
+    container_name: postgres
+    environment:
+      POSTGRES_DB: "m_tech"
+      POSTGRES_USER: "roman"
+      POSTGRES_PASSWORD: "5555"
+    ports:
+      - "3030:5432"

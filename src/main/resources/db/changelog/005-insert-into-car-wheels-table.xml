@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-car-wheels-data" author="roman">
+        <insert tableName="car_wheels" schemaName="app">
+            <column name="car_wheels_id" value="846379fc-dde5-412a-815a-8336b805e5e2"/>
+            <column name="size" value="R15"/>
+            <column name="condition" value="New"/>
+            <column name="amount" value="1"/>
+            <column name="price" value="27600"/>
+        </insert>
+        <insert tableName="car_wheels" schemaName="app">
+            <column name="car_wheels_id" value="4281f9ea-eed6-4871-a1b1-f532c271d29e"/>
+            <column name="size" value="R16"/>
+            <column name="condition" value="Used"/>
+            <column name="amount" value="26"/>
+            <column name="price" value="12400"/>
+        </insert>
+        <insert tableName="car_wheels" schemaName="app">
+            <column name="car_wheels_id" value="05bbf204-d09a-4135-886b-dd268109b906"/>
+            <column name="size" value="R17"/>
+            <column name="condition" value="New"/>
+            <column name="amount" value="3"/>
+            <column name="price" value="55000"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

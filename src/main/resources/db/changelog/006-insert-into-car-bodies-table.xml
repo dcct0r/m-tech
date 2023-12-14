@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-car-bodies-data" author="roman">
+        <insert tableName="car_bodies" schemaName="app">
+            <column name="car_bodies_id" value="a2af4f5e-099d-46ea-bf01-10a4b917b256"/>
+            <column name="type" value="Sedan"/>
+            <column name="condition" value="New"/>
+            <column name="amount" value="30"/>
+            <column name="price" value="550000"/>
+        </insert>
+        <insert tableName="car_bodies" schemaName="app">
+            <column name="car_bodies_id" value="648fb0d6-faff-4f3c-8479-973df23c61ee"/>
+            <column name="type" value="Hatchback"/>
+            <column name="condition" value="Used"/>
+            <column name="amount" value="12"/>
+            <column name="price" value="320000"/>
+        </insert>
+        <insert tableName="car_bodies" schemaName="app">
+            <column name="car_bodies_id" value="3eae2193-42bb-4044-9394-8b7ccac13593"/>
+            <column name="type" value="Truck"/>
+            <column name="condition" value="New"/>
+            <column name="amount" value="1"/>
+            <column name="price" value="800000"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

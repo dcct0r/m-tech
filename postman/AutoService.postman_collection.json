@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "48984c54-5847-412e-aa3f-5568ed7ce2ed",
+		"name": "AutoService",
+		"description": "Коллекция со всеми запросами.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26698045"
+	},
+	"item": [
+		{
+			"name": "Tyres",
+			"item": [
+				{
+					"name": "Get all tyres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/tyres/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"tyres",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create tire",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"size\": \"R26\",\n    \"condition\": \"New\",\n    \"amount\": 13,\n    \"price\": 55000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/catalog/tyres",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"tyres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find tire by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/tyres/846379fc-dde5-412a-815a-8336b805e5e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"tyres",
+								"846379fc-dde5-412a-815a-8336b805e5e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete tire by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/tyres/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"tyres",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Запросы для шин"
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Get all cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/cars/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"cars",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"carBodyId\": \"a2af4f5e-099d-46ea-bf01-10a4b917b256\",\n    \"carWheelId\": \"846379fc-dde5-412a-815a-8336b805e5e2\",\n    \"carWheelsAmount\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/catalog/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find car by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/cars/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/cars/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Запросы для автомобилей"
+		},
+		{
+			"name": "Bodies",
+			"item": [
+				{
+					"name": "Get all bodies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/bodies/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"bodies",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Sedan\",\n    \"condition\": \"used\",\n    \"amount\": 3,\n    \"price\": 70000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/catalog/bodies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"bodies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find body by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/bodies/a2af4f5e-099d-46ea-bf01-10a4b917b256",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"bodies",
+								"a2af4f5e-099d-46ea-bf01-10a4b917b256"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete body by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/catalog/bodies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"catalog",
+								"bodies",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Запросы для корпусов автомобилей."
+		}
+	]
+}
