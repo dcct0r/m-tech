@@ -21,12 +21,9 @@ public class AssemblyChecker {
         CarBodyInventoryItem carBodyItem = new CarBodyInventoryItem(carBodyService);
         CarWheelInventoryItem carWheelItem = new CarWheelInventoryItem(carWheelService);
 
-        if(carBodyItem.isCarBodyExist(carDto.getCarBodyId()) &&
+        return carBodyItem.isCarBodyExist(carDto.getCarBodyId()) &&
                 carBodyItem.isCarBodyEnough(carDto.getCarBodyId()) &&
                 carWheelItem.isCarWheelExist(carDto.getCarWheelId()) &&
-                carWheelItem.isCarWheelEnough(carDto.getCarWheelId())) {
-            return true;
-        }
-        return false;
+                carWheelItem.isCarWheelEnough(carDto.getCarWheelId());
     }
 }
