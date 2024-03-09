@@ -32,19 +32,19 @@ public class CarController {
         this.carWheelService = carWheelService;
     }
 
-    @Operation(summary = "Get all cars")
+    @Operation(summary = "Get all stocks")
     @GetMapping("/all")
     public ResponseEntity<List<Car>> getCars() {
         return new ResponseEntity<>(carService.getCars(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Get car by id")
+    @Operation(summary = "Get stocks by id")
     @GetMapping("/{id}")
     public ResponseEntity<Car> getCarById(@PathVariable UUID id) {
         return new ResponseEntity<>(carService.getCarById(id), HttpStatus.OK);
     }
 
-    @Operation(summary = "Save car with details")
+    @Operation(summary = "Save stocks")
     @PostMapping(consumes = "application/json")
     public ResponseEntity<Car> save(@RequestBody CarDto carDto) {
         AssemblyChecker assemblyChecker = new AssemblyChecker(carWheelService, carBodyService);
@@ -59,7 +59,7 @@ public class CarController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @Operation(summary = "Delete car by id")
+    @Operation(summary = "Delete stock by id")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable UUID id) {
         carService.removeById(id);

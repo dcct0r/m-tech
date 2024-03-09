@@ -6,8 +6,8 @@ import io.swagger.v3.oas.annotations.info.Info;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "Autoservice API",
-                description = "Autoservice documentation api", version = "1.0.0",
+                title = "Forecast API",
+                description = "Forecast documentation api", version = "1.0.0",
                 contact = @Contact(
                         name = "Roman",
                         email = "dcct0rlon@gmail.com",

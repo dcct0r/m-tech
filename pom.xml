@@ -50,8 +50,9 @@
             <version>6.4.0.Final</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
