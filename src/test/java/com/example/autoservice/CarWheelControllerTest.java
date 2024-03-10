@@ -3,6 +3,7 @@ package com.example.autoservice;
 import com.example.autoservice.appservice.CarWheelService;
 import com.example.autoservice.domain.model.CarWheel;
 import com.example.autoservice.infrastructure.api.controller.CarWheelController;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -39,6 +40,7 @@ public class CarWheelControllerTest {
     }
 
     @Test
+    @DisplayName("GET catalog/tyres/all request returns HTTP code 200 OK")
     void handleGetAllWheels_ReturnsInvalidResponseEntity() {
         //given
         var wheel = List.of(new CarWheel(UUID.randomUUID(), "15R", "new", 0, 2200.2));
@@ -52,6 +54,7 @@ public class CarWheelControllerTest {
     }
 
     @Test
+    @DisplayName("GET catalog/tyres/{id} request returns HTTP code 200 OK")
     void handleGetWheelsById_ReturnsValidResponseEntity() {
         //given
         UUID temp = UUID.randomUUID();
