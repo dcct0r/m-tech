@@ -1,8 +1,6 @@
 package com.example.autoservice;
 
-import com.example.autoservice.appservice.CarBodyService;
 import com.example.autoservice.appservice.CarService;
-import com.example.autoservice.appservice.CarWheelService;
 import com.example.autoservice.domain.model.Car;
 import com.example.autoservice.infrastructure.api.controller.CarController;
 import org.junit.jupiter.api.DisplayName;
@@ -26,12 +24,6 @@ public class CarControllerTest {
 
     @Mock
     CarService carService;
-
-    @Mock
-    CarBodyService carBodyService;
-
-    @Mock
-    CarWheelService carWheelService;
 
     @InjectMocks
     CarController carController;

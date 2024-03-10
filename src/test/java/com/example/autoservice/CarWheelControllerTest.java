@@ -27,23 +27,10 @@ public class CarWheelControllerTest {
     CarWheelController carWheelController;
 
     @Test
+    @DisplayName("GET catalog/tyres/all request returns HTTP code 200 OK")
     void handleGetAllWheels_ReturnsValidResponseEntity() {
         //given
         var wheel = List.of(new CarWheel(UUID.randomUUID(), "15R", "new", 5, 2200.2));
-        doReturn(wheel).when(this.carWheelService).getCarWheels();
-        //when
-        var respEntity = this.carWheelController.getAllCarWheels();
-        //then
-        assertNotNull(respEntity);
-        assertEquals(HttpStatus.OK, respEntity.getStatusCode());
-        assertEquals(wheel, respEntity.getBody());
-    }
-
-    @Test
-    @DisplayName("GET catalog/tyres/all request returns HTTP code 200 OK")
-    void handleGetAllWheels_ReturnsInvalidResponseEntity() {
-        //given
-        var wheel = List.of(new CarWheel(UUID.randomUUID(), "15R", "new", 0, 2200.2));
         doReturn(wheel).when(this.carWheelService).getCarWheels();
         //when
         var respEntity = this.carWheelController.getAllCarWheels();
